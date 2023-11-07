@@ -24,4 +24,14 @@ public class PrimeiraController {
     }
 
 
+    @PostMapping("/metodoComBodyParams")
+    public String metodoComBodyParams(@RequestBody Usuario usuario) {
+        return "metodoComBodyParams" + usuario.username;
+    }
+
+    record Usuario (String username) {
+
+    }
+
+
 }
